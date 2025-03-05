@@ -120,7 +120,14 @@ This project provides an interactive **wireless network calculator** covering:
 The online calculators ensure **accurate computations** while providing an easy-to-use interface.
 
 ---
+---
+## 👨‍💻 Authors
+This project was developed by:
 
+- **Yazeed Hamdan**
+- **Saja Shareef**
+
+---
 ## 📫 Contact
 For any questions or discussions, feel free to reach out:
 
