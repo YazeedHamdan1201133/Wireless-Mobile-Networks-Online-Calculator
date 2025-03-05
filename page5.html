@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cellular System Calculator</title>
+    <link rel="stylesheet" href="page5.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cellular System Calculator</h1>
+        <form id="calcForm">
+            <div class="form-group">
+                <label for="ReferenceDistance">Reference Distance:</label>
+                <input type="number" id="ReferenceDistance" required>
+                <select id="ReferenceDistanceUnit">
+                    <option value="meters">Meters</option>
+                    <option value="kilometers">Kilometers</option>
+                    <option value="Mega">Mega</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="powerAtRefDistance">Power at Reference Distance:</label>
+                <input type="number" id="powerAtRefDistance" required>
+                <select id="powerAtRefDistanceUnit">
+                    <option value="dB">dB</option>
+                    <option value="watts">Watts</option>
+                    <option value="milliwatts">Milliwatts</option>
+                    <option value="microwatts">Microwatts</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="pathLossExponent">Path Loss Exponent:</label>
+                <input type="number" id="pathLossExponent" required>
+            </div>
+            <div class="form-group">
+                <label for="receiverSensitivity">Receiver Sensitivity:</label>
+                <input type="number" id="receiverSensitivity" required>
+                <select id="receiverSensitivityUnit">
+                    <option value="dB">dB</option>
+                    <option value="watts">Watts</option>
+                    <option value="milliwatts">Milliwatts</option>
+                    <option value="microwatts">Microwatts</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="TotalArea">Total Area:</label>
+                <input type="number" id="TotalArea" required>
+                <select id="TotalAreaUnit">
+                    <option value="m^2">m^2</option>
+                    <option value="Km^2">Km^2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="AverageCallDuration">Average Call Duration (minutes):</label>
+                <input type="number" id="AverageCallDuration" required>
+            </div>
+            <div class="form-group">
+                <label for="AverageCallsPerDay">Average Calls Per Day:</label>
+                <input type="number" id="AverageCallsPerDay" required>
+            </div>
+            <div class="form-group">
+                <label for="TotalNumberOfUsers">Total Number of Users:</label>
+                <input type="number" id="TotalNumberOfUsers" required>
+            </div>
+            <div class="form-group">
+                <label for="SIR">SIR (dB):</label>
+                <input type="number" id="SIR" required>
+            </div>
+            <div class="form-group">
+                <label for="calldropprobability">Call Drop Probability:</label>
+                <input type="number" id="calldropprobability" required>
+            </div>
+            <div class="form-group">
+                <label for="timeslotsPerCarrier">Timeslots Per Carrier:</label>
+                <input type="number" id="timeslotsPerCarrier" required>
+            </div>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="results" style="display:none;">
+            <h2>Results:</h2>
+            <h3>Maximum Distance:</h3>
+            <p id="resultMaxDistance">Maximum Distance: <span></span></p>
+            <h3>Maximum Cell Size:</h3>
+            <p id="resultMaxCellSize">Maximum Cell Size: <span></span></p>
+            <h3>Number of Cells:</h3>
+            <p id="resultNumCells">Number of Cells: <span></span></p>
+            <h3>Total Traffic:</h3>
+            <p id="resultTotalTraffic">Total Traffic: <span></span></p>
+            <h3>Cell Traffic:</h3>
+            <p id="resultCellTraffic">Cell Traffic: <span></span></p>
+            <h3>Number of Cells in Cluster:</h3>
+            <p id="resultNumCellsInCluster">Number of Cells in Cluster: <span></span></p>
+            <h3>Number of Channels:</h3>
+            <p id="resultNumChannels">Number of Channels: <span></span></p>
+            
+        </div>
+        <div class="footer-buttons">
+            <a href="index.html" class="btn">Back to Main</a>
+            <button class="btn clear-btn" onclick="clearAllFields()">Clear</button>
+        </div>
+    </div>
+    <script src="page5.js"></script>
+</body>
+</html>

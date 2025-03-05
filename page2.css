@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #f3ec78, #af4261);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.input-column label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-group input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #611414;
+    width: 150px; 
+    text-align: center;
+    margin-right: 10px;
+}
+
+.input-group select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #611414;
+    text-align: center;
+}
+
+.input-column input, .input-column select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #611414;
+    width: 250px; 
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.input-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3fb884;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.input-btn:hover {
+    background-color: #0056b3;
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin: 0 10px; /* Add spacing between buttons */
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.clear-btn {
+    background-color: #FF6347; /* Tomato color */
+}
+
+.clear-btn:hover {
+    background-color: #FF4500; /* Orange red color */
+}
+
+#results p {
+    margin: 10px 0;
+    font-size: 18px;
+}

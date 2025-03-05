@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 4</title>
+    <link rel="stylesheet" href="page4.css">
+</head>
+<body onload="clearAllFields()">
+    <div class="container">
+        <h1>CSMA Throughput Calculator</h1>
+        <div class="input-container">
+            <div class="input-column">
+                <label for="csmaType">Select CSMA Type:</label>
+                <select id="csmaType">
+                    <option value="unslottedNonPersistent">Unslotted Non-Persistent CSMA</option>
+                    <option value="slottedNonPersistent">Slotted Non-Persistent CSMA</option>
+                    <option value="unslotted1Persistent">Unslotted 1-Persistent CSMA</option>
+                    <option value="slotted1Persistent">Slotted 1-Persistent CSMA</option>
+                </select>
+                <label for="frameRate">Frame Rate:</label>
+                <div class="input-group">
+                    <input type="number" id="frameRate" placeholder="Frame Rate">
+                    <select id="frameRateUnit">
+                        <option value="frames/sec">frames/sec</option>
+                        <option value="Kframes/sec">Kframes/sec</option>
+                        <option value="Mframes/sec">Mframes/sec</option>
+                        <option value="Gframes/sec">Gframes/sec</option>
+                    </select>
+                </div>
+                <label for="frameSize">Frame Size:</label>
+                <div class="input-group">
+                    <input type="number" id="frameSize" placeholder="Frame Size">
+                    <select id="frameSizeUnit">
+                        <option value="none">bits</option>
+                        <option value="Kbits">Kbits</option>
+                        <option value="Mbits">Mbits</option>
+                        <option value="Gbits">Gbits</option>
+                    </select>
+                </div>
+                <label for="bandwidth">Data Transmission Bandwidth:</label>
+                <div class="input-group">
+                    <input type="number" id="bandwidth" placeholder="Bandwidth">
+                    <select id="bandwidthUnit">
+                        <option value="none">bps</option>
+                        <option value="Kbps">Kbps</option>
+                        <option value="Mbps">Mbps</option>
+                        <option value="Gbps">Gbps</option>
+                    </select>
+                </div>
+                <label for="propagationTime">Propagation Time:</label>
+                <div class="input-group">
+                    <input type="number" id="propagationTime" placeholder="Propagation Time">
+                    <select id="propagationTimeUnit">
+                        <option value="none">sec</option>
+                        <option value="nsec">nsec</option>
+                        <option value="µsec">µsec</option>
+                        <option value="msec">msec</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="input-btn" onclick="calculateParameters()">Calculate Parameters</button>
+        </div>
+        <div id="results">
+            <p id="resultT" class="result-item" style="display: none;">T (Transmission time): </p>
+            <p id="resultG" class="result-item" style="display: none;">G (Offered load): </p>
+            <p id="resultAlpha" class="result-item" style="display: none;">α (Alpha): </p>
+            <p id="resultThroughput" class="result-item" style="display: none;">Throughput (S): </p>
+        </div>
+        <div class="footer-buttons">
+            <a href="index.html" class="btn">Back to Main</a>
+            <button class="btn clear-btn" onclick="clearAllFields()">Clear</button>
+        </div>
+    </div>
+    <script src="page4.js"></script>
+</body>
+</html>

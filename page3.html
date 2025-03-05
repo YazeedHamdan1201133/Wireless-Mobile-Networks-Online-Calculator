@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 3</title>
+    <link rel="stylesheet" href="page3.css">
+</head>
+<body onload="clearAllFields()">
+    <div class="container">
+        <h1>Transmit Power Calculator</h1>
+        <div class="input-container">
+            <div class="input-column">
+                <label for="modulationType">Modulation Type:</label>
+                <select id="modulationType">
+                    <option value="BPSK/QPSK">BPSK/QPSK</option>
+                    <option value="8-PSK">8-PSK</option>
+                    <option value="16-PSK">16-PSK</option>
+                </select>
+                <label for="berValue">BER Value:</label>
+                <select id="berValue">
+                    <option value="10^-2">10^-2</option>
+                    <option value="10^-3">10^-3</option>
+                    <option value="10^-4">10^-4</option>
+                    <option value="10^-5">10^-5</option>
+                    <option value="10^-6">10^-6</option>
+                    <option value="10^-7">10^-7</option>
+                </select>
+                <label for="pathLoss">Path Loss:</label>
+                <input type="number" id="pathLoss" placeholder="Path Loss (dB)">
+                <label for="transmitGain">Transmit Antenna Gain:</label>
+                <input type="number" id="transmitGain" placeholder="Transmit Antenna Gain (dB)">
+                <label for="receiveGain">Receive Antenna Gain:</label>
+                <input type="number" id="receiveGain" placeholder="Receive Antenna Gain (dB)">
+                <label for="dataRate">Data Rate:</label>
+                <input type="number" id="dataRate" placeholder="Data Rate (dB)">
+                <label for="lineLoss">Antenna Feed Line Loss:</label>
+                <input type="number" id="lineLoss" placeholder="Antenna Feed Line Loss (dB)">
+            </div>
+            <div class="input-column">
+                <label for="otherLoss">Other Losses:</label>
+                <input type="number" id="otherLoss" placeholder="Other Losses (dB)">
+                <label for="fadeMargin">Fade Margin:</label>
+                <input type="number" id="fadeMargin" placeholder="Fade Margin (dB)">
+                <label for="ampGain">Receiver Amplifier Gain:</label>
+                <input type="number" id="ampGain" placeholder="Receiver Amplifier Gain (dB)">
+                <label for="transAmpGain">Transmitter Amplifier Gain:</label>
+                <input type="number" id="transAmpGain" placeholder="Transmitter Amplifier Gain (dB)">
+                <label for="noiseFigure">Noise Figure:</label>
+                <input type="number" id="noiseFigure" placeholder="Noise Figure (dB)">
+                <label for="temperature">Noise Temperature:</label>
+                <input type="number" id="temperature" placeholder="Noise Temperature (dB)">
+                <label for="linkMargin">Link Margin:</label>
+                <input type="number" id="linkMargin" placeholder="Link Margin (dB)">
+            </div>
+            <div class="input-column">
+                <h2>dB Converter</h2>
+                <label for="normalValue">Normal Value:</label>
+                <input type="number" id="normalValue" placeholder="Normal Value">
+                <button class="convert-btn" onclick="convertToDb()">Convert to dB</button>
+                <label for="convertedDbValue">Converted dB Value:</label>
+                <input type="number" id="convertedDbValue" placeholder="Converted dB Value" readonly>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="input-btn" onclick="calculatePt()">Calculate Pt</button>
+        </div>
+        <div id="results">
+            <p id="resultPt" class="result-item" style="display: none;">Total Transmit Power (Pt): </p>
+        </div>
+        <div class="footer-buttons">
+            <a href="index.html" class="btn">Back to Main</a>
+            <button class="btn clear-btn" onclick="clearAllFields()">Clear</button>
+        </div>
+    </div>
+    <script src="page3.js"></script>
+</body>
+</html>

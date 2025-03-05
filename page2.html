@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+    <link rel="stylesheet" href="page2.css">
+</head>
+<body onload="clearAllFields()">
+    <div class="container">
+        <div class="input-container">
+            <div class="input-column">
+                <label for="bandwidth">Bandwidth:</label>
+                <div class="input-group">
+                    <input type="number" id="bandwidth" placeholder="Bandwidth">
+                    <select id="bandwidthUnit">
+                        <option value="Hz">Hz</option>
+                        <option value="kHz">kHz</option>
+                        <option value="MHz">MHz</option>
+                        <option value="GHz">GHz</option>
+                    </select>
+                </div>
+
+                <label for="subcarrierSpacing">Subcarrier Spacing:</label>
+                <div class="input-group">
+                    <input type="number" id="subcarrierSpacing" placeholder="Subcarrier Spacing">
+                    <select id="subcarrierSpacingUnit">
+                        <option value="Hz">Hz</option>
+                        <option value="kHz">kHz</option>
+                        <option value="MHz">MHz</option>
+                        <option value="GHz">GHz</option>
+                    </select>
+                </div>
+
+                <label for="qam">QAM Modulation:</label>
+                <select id="qam">
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="8">8</option>
+                    <option value="16">16</option>
+                    <option value="32">32</option>
+                    <option value="64">64</option>
+                    <option value="128">128</option>
+                    <option value="256">256</option>
+                    <option value="512">512</option>
+                    <option value="1024">1024</option>
+                </select>
+
+                <label for="ofdmSymbols">OFDM Symbols per Resource Block:</label>
+                <input type="number" id="ofdmSymbols" placeholder="OFDM Symbols per Resource Block" min="1" value="7">
+
+                <label for="resourceBlocks">Number of Resource Blocks:</label>
+                <input type="number" id="resourceBlocks" placeholder="Number of Resource Blocks" min="1" value="4">
+
+                <label for="duration">Duration of Resource Block:</label>
+                <div class="input-group">
+                    <input type="number" id="duration" placeholder="Duration of Resource Block">
+                    <select id="durationUnit">
+                        <option value="sec">Sec</option>
+                        <option value="msec">mSec</option>
+                        <option value="nsec">nSec</option>
+                        <option value="usec">uSec</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="input-btn" onclick="calculateBitsPerResourceElement()">Calculate Bits per Resource Element</button>
+            <button class="input-btn" onclick="calculateBitsPerOFDMSymbol()">Calculate Bits per OFDM Symbol</button>
+            <button class="input-btn" onclick="calculateBitsPerResourceBlock()">Calculate Bits per Resource Block</button>
+            <button class="input-btn" onclick="calculateMaxTransmissionRate()">Calculate Max Transmission Rate</button>
+        </div>
+        <div id="results">
+            <p id="bitsPerResourceElement" class="result-item" style="display: none;">Bits per Resource Element: </p>
+            <p id="bitsPerOFDMSymbol" class="result-item" style="display: none;">Bits per OFDM Symbol: </p>
+            <p id="bitsPerResourceBlock" class="result-item" style="display: none;">Bits per Resource Block: </p>
+            <p id="maxTransmissionRate" class="result-item" style="display: none;">Max Transmission Rate: </p>
+        </div>
+        <div class="footer-buttons">
+            <a href="index.html" class="btn">Back to Main</a>
+            <button class="btn clear-btn" onclick="clearAllFields()">Clear</button>
+        </div>
+    </div>
+    <script src="page2.js"></script>
+</body>
+</html>

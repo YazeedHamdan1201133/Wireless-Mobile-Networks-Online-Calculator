@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+    <link rel="stylesheet" href="page1.css">
+</head>
+<body>
+    <div class="container">
+        <div id="samplingRateResult" class="results sampling-rate-result"></div>
+        <div id="quantizerLevelsResult" class="results quantizer-levels-result"></div>
+        <div id="inputBitsResult" class="results input-bits-result"></div>
+        <div id="sourceEncoderBitRateResult" class="results source-encoder-bit-rate-result"></div>
+        <div id="channelEncoderBitRateResult" class="results channel-encoder-bit-rate-result"></div>
+        <div id="interleaverBitRateResult" class="results interleaver-bit-rate-result"></div>
+        <img src="WireBlk9.png" alt="Wireless Network Image" class="top-image">
+        <div class="input-container">
+            <div class="input-column">
+                <input type="text" id="bandwidth" placeholder="Bandwidth value">
+              
+                <button class="input-btn" onclick="calculateSamplingRate()">Calculate Sampling Rate</button>
+                <select id="bandwidthUnit">
+                    <option value="Hz">Hz</option>
+                    <option value="KHz">KHz</option>
+                    <option value="MHz">MHz</option>
+                    <option value="GHz">GHz</option>
+                </select>
+            </div>
+            <div class="input-column">
+                <input type="text" id="numBits" placeholder="Number of bits">
+                <button class="input-btn" onclick="calculateQuantizerLevels()">Calculate Quantizer Levels</button>
+                <p>  </p>
+                <button class="input-btn" onclick="calculateInputBits()">Calculate Input Bits to Source Encoder</button>
+            </div>
+            <div class="input-column">
+                <input type="text" id="compressionRate" placeholder="Compression Rate">
+                <button class="input-btn" onclick="calculateSourceEncoderBitRate()">Calculate Source Encoder Bit Rate</button>
+            </div>
+            <div class="input-column">
+                <input type="text" id="channelEncoderRate" placeholder="Channel Encoder Rate">
+                <button class="input-btn" onclick="calculateChannelEncoderBitRate()">Calculate Channel Encoder Bit Rate</button>
+            </div>
+            <div class="input-column">
+                <input type="text" id="interleaverBits" placeholder="Number of Interleaver Bits">
+                <button class="input-btn" onclick="displayInterleaverBitRate()">Display Interleaver Bit Rate</button>
+            </div>
+        </div>
+        <button class="btn clear-btn large-btn" onclick="clearFieldsAndResults()">Clear</button>
+        <a href="index.html" class="btn back-btn large-btn">Back to Main</a>
+    </div>
+    <script src="page1.js"></script>
+</body>
+</html>
