@@ -38,8 +38,8 @@ This project provides **five online calculators** designed to compute various wi
 **Outputs:**  
 ✔ Number of bits per resource element  
 ✔ Bits per OFDM symbol 
+✔ Maximum transmission rate                                            
 ✔ Number of bits per resource block 
-✔ Maximum transmission rate  
 
 
 ### 🔋 **Calculator 3: Power Transmission Estimation**
