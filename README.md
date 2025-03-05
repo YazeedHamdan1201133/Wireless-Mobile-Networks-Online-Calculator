@@ -37,10 +37,10 @@ This project provides **five online calculators** designed to compute various wi
 
 **Outputs:**  
 ✔ Number of bits per resource element  
-✔ Bits per OFDM symbol & resource block  
+✔ Bits per OFDM symbol 
+✔ Number of bits per resource block 
 ✔ Maximum transmission rate  
 
-📌 **Error Handling:** Bandwidth must be divisible by subcarrier spacing.
 
 ### 🔋 **Calculator 3: Power Transmission Estimation**
 **Includes a dB conversion calculator!**  
@@ -50,7 +50,7 @@ This project provides **five online calculators** designed to compute various wi
 ✔ Other system losses and link margin  
 
 **Outputs:**  
-✔ Required total transmit power based on 8-PSK modulation  
+✔  Total transmit power
 
 ### 📡 **Calculator 4: CSMA Throughput Analysis**
 **Supports:**  
@@ -71,11 +71,14 @@ This project provides **five online calculators** designed to compute various wi
 ✔ Number of carriers per system  
 
 **Outputs:**  
-✔ Number of cells in the system  
+✔ Number of cells
 ✔ Traffic per cell  
-✔ Cluster & carrier allocation  
+✔ Cluster & carrier allocation
+✔ Maximum Distance
+✔ Maximum Cell Size
+✔ Number of Channels
 
-📌 **Error Handling:** Users must input **positive values** for all parameters.
+
 
 ---
 
